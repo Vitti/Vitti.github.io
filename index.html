@@ -25,7 +25,7 @@
             var x = readCookie('someKey')
             
             if (x === 'someValue') {
-                window.location = "myApp://invitation?code=1Q2W3E";
+                window.location = "myApp://invitation?code=1Q2W3E"+x;
                 eraseCookie('someKey')
             }
         }
