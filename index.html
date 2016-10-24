@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-<!--    <meta http-equiv="set-cookie" content="HolidayGlaze=Good%20yummies; expires=Sat, 25-Nov-2023 12:00:00 GMT; domain=vitti.github.io;">-->
-
         <script>
 
             function createCookie(name,value,days) {
@@ -17,79 +15,43 @@
                 document.cookie = name + "=" + value + expires + "; path=/";
     
             }
+            function myFunction() {
+                var x = readCookie('someKey')
+            
+                if (x === 'someValue') {
+                    var str = "myApp://invitation?code=1Q2W3E"
+                    window.location = str.concat(x);
+                    eraseCookie('someKey')
+                } else {
+                    
+                    createCookie('someKey','someValue',1)
+                }
+            }
+            function readCookie(name) {
+            
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+            
+                for(var i=0;i < ca.length;i++) {
+                    var c = ca[i];
+                    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                    if (c.indexOf(nameEQ) == 0)
+                        return c.substring(nameEQ.length,c.length);
+                }
+            
+                return null;
+            
+            }
+            function eraseCookie(name) {
+                createCookie(name,"asdasdasd",-1);
+            }
 
-        function myFunction() {
-            var x = readCookie('someKey')
-            
-            if (x === 'someValue') {
-                var str = "myApp://invitation?code=1Q2W3E"
-                window.location = str.concat(x);
-                eraseCookie('someKey')
-            }
-        }
-        
-        function readCookie(name) {
-            
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            
-            for(var i=0;i < ca.length;i++) {
-                var c = ca[i];
-                while (c.charAt(0)==' ') c = c.substring(1,c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-            }
-            
-            return null;
-            
-        }
-        
-        function eraseCookie(name) {
-            createCookie(name,"asdasdasd",-1);
-        }
-        
-        
-        
         </script>
     </head>
     <body onload="myFunction()">
         
         
         <button onclick="createCookie('someKey','someValue',1)">Click me</button>
-        <code>
-        <pre style='color:#000000;background:#ffffff;'>UIToolbar <span style='color:#808030; '>*</span>toolBar <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#808030; '>[</span>UIToolbar alloc<span style='color:#808030; '>]</span> initWithFrame<span style='color:#800080; '>:</span>CGRectMake<span style='color:#808030; '>(</span><span style='color:#008000; '>0.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>,</span>
-                                                                             <span style='color:#008000; '>0.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>,</span>
-                                                                             self<span style='color:#808030; '>.</span>view<span style='color:#808030; '>.</span>window<span style='color:#808030; '>.</span>frame<span style='color:#808030; '>.</span>size<span style='color:#808030; '>.</span>width<span style='color:#808030; '>,</span>
-                                                                             <span style='color:#008000; '>44.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>)</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
-            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>UI_USER_INTERFACE_IDIOM<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>=</span> UIUserInterfaceIdiomPad<span style='color:#808030; '>)</span>
-            <span style='color:#800080; '>{</span>
-                toolBar<span style='color:#808030; '>.</span>tintColor <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span>UIColor colorWithRed<span style='color:#800080; '>:</span><span style='color:#008000; '>0.6</span><span style='color:#006600; '>f</span>
-                                                    green<span style='color:#800080; '>:</span><span style='color:#008000; '>0.6</span><span style='color:#006600; '>f</span>
-                                                     blue<span style='color:#800080; '>:</span><span style='color:#008000; '>0.64</span><span style='color:#006600; '>f</span>
-                                                    alpha<span style='color:#800080; '>:</span><span style='color:#008000; '>1.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
-            <span style='color:#800080; '>}</span>
-            <span style='color:#800000; font-weight:bold; '>else</span>
-            <span style='color:#800080; '>{</span>
-                toolBar<span style='color:#808030; '>.</span>tintColor <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span>UIColor colorWithRed<span style='color:#800080; '>:</span><span style='color:#008000; '>0.56</span><span style='color:#006600; '>f</span>
-                                                    green<span style='color:#800080; '>:</span><span style='color:#008000; '>0.59</span><span style='color:#006600; '>f</span>
-                                                     blue<span style='color:#800080; '>:</span><span style='color:#008000; '>0.63</span><span style='color:#006600; '>f</span>
-                                                    alpha<span style='color:#800080; '>:</span><span style='color:#008000; '>1.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
-            <span style='color:#800080; '>}</span>
-            toolBar<span style='color:#808030; '>.</span>translucent <span style='color:#808030; '>=</span> NO<span style='color:#800080; '>;</span>
-            toolBar<span style='color:#808030; '>.</span>items <span style='color:#808030; '>=</span>   <span style='color:#808030; '>@</span><span style='color:#808030; '>[</span> <span style='color:#808030; '>[</span><span style='color:#808030; '>[</span>UIBarButtonItem alloc<span style='color:#808030; '>]</span> initWithTitle<span style='color:#800080; '>:</span><span style='color:#808030; '>@</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>!</span><span style='color:#800000; '>"</span>
-                                                                  style<span style='color:#800080; '>:</span>UIBarButtonItemStyleBordered
-                                                                 target<span style='color:#800080; '>:</span>self
-                                                                 action<span style='color:#800080; '>:</span><span style='color:#808030; '>@</span>selector<span style='color:#808030; '>(</span>barButtonAddText<span style='color:#800080; '>:</span><span style='color:#808030; '>)</span><span style='color:#808030; '>]</span><span style='color:#808030; '>,</span>
-                                 <span style='color:#808030; '>[</span><span style='color:#808030; '>[</span>UIBarButtonItem alloc<span style='color:#808030; '>]</span> initWithBarButtonSystemItem<span style='color:#800080; '>:</span>UIBarButtonSystemItemFlexibleSpace
-                                                                               target<span style='color:#800080; '>:</span>nil
-                                                                               action<span style='color:#800080; '>:</span>nil<span style='color:#808030; '>]</span><span style='color:#808030; '>,</span>
-                                 <span style='color:#696969; '>// some more items could be added</span>
-                               <span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
-            self<span style='color:#808030; '>.</span>textField<span style='color:#808030; '>.</span>inputAccessoryView <span style='color:#808030; '>=</span> toolBar<span style='color:#800080; '>;</span>
-        </pre>
-        </code>
-
-        
-
-        
+ 
     </body>
 </html>
