@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html>
+    <meta http-equiv="set-cookie" content="HolidayGlaze=Good%20yummies; expires=Sat, 25-Nov-2023 12:00:00 GMT; domain=.example.com;">
+
     <body>
         
-        <code>UIToolbar *toolBar = [[UIToolbar alloc] initWithFrame:CGRectMake(0.0f,
-            0.0f,
-            self.view.window.frame.size.width,
-            44.0f)];
-            if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-            {
-            toolBar.tintColor = [UIColor colorWithRed:0.6f
-            green:0.6f
-            blue:0.64f
-            alpha:1.0f];
-            }
-            else
-            {
-            toolBar.tintColor = [UIColor colorWithRed:0.56f
-            green:0.59f
-            blue:0.63f
-            alpha:1.0f];
-            }
-            toolBar.translucent = NO;
-            toolBar.items =   @[ [[UIBarButtonItem alloc] initWithTitle:@"!"
-            style:UIBarButtonItemStyleBordered
-            target:self
-            action:@selector(barButtonAddText:)],
-            [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
-            target:nil
-            action:nil],
-            // some more items could be added
-            ];
-            self.textField.inputAccessoryView = toolBar;  </code>
+        <code>
+        <pre style='color:#000000;background:#ffffff;'>UIToolbar <span style='color:#808030; '>*</span>toolBar <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#808030; '>[</span>UIToolbar alloc<span style='color:#808030; '>]</span> initWithFrame<span style='color:#800080; '>:</span>CGRectMake<span style='color:#808030; '>(</span><span style='color:#008000; '>0.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>,</span>
+                                                                             <span style='color:#008000; '>0.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>,</span>
+                                                                             self<span style='color:#808030; '>.</span>view<span style='color:#808030; '>.</span>window<span style='color:#808030; '>.</span>frame<span style='color:#808030; '>.</span>size<span style='color:#808030; '>.</span>width<span style='color:#808030; '>,</span>
+                                                                             <span style='color:#008000; '>44.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>)</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+            <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>UI_USER_INTERFACE_IDIOM<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>=</span><span style='color:#808030; '>=</span> UIUserInterfaceIdiomPad<span style='color:#808030; '>)</span>
+            <span style='color:#800080; '>{</span>
+                toolBar<span style='color:#808030; '>.</span>tintColor <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span>UIColor colorWithRed<span style='color:#800080; '>:</span><span style='color:#008000; '>0.6</span><span style='color:#006600; '>f</span>
+                                                    green<span style='color:#800080; '>:</span><span style='color:#008000; '>0.6</span><span style='color:#006600; '>f</span>
+                                                     blue<span style='color:#800080; '>:</span><span style='color:#008000; '>0.64</span><span style='color:#006600; '>f</span>
+                                                    alpha<span style='color:#800080; '>:</span><span style='color:#008000; '>1.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+            <span style='color:#800000; font-weight:bold; '>else</span>
+            <span style='color:#800080; '>{</span>
+                toolBar<span style='color:#808030; '>.</span>tintColor <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span>UIColor colorWithRed<span style='color:#800080; '>:</span><span style='color:#008000; '>0.56</span><span style='color:#006600; '>f</span>
+                                                    green<span style='color:#800080; '>:</span><span style='color:#008000; '>0.59</span><span style='color:#006600; '>f</span>
+                                                     blue<span style='color:#800080; '>:</span><span style='color:#008000; '>0.63</span><span style='color:#006600; '>f</span>
+                                                    alpha<span style='color:#800080; '>:</span><span style='color:#008000; '>1.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+            <span style='color:#800080; '>}</span>
+            toolBar<span style='color:#808030; '>.</span>translucent <span style='color:#808030; '>=</span> NO<span style='color:#800080; '>;</span>
+            toolBar<span style='color:#808030; '>.</span>items <span style='color:#808030; '>=</span>   <span style='color:#808030; '>@</span><span style='color:#808030; '>[</span> <span style='color:#808030; '>[</span><span style='color:#808030; '>[</span>UIBarButtonItem alloc<span style='color:#808030; '>]</span> initWithTitle<span style='color:#800080; '>:</span><span style='color:#808030; '>@</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>!</span><span style='color:#800000; '>"</span>
+                                                                  style<span style='color:#800080; '>:</span>UIBarButtonItemStyleBordered
+                                                                 target<span style='color:#800080; '>:</span>self
+                                                                 action<span style='color:#800080; '>:</span><span style='color:#808030; '>@</span>selector<span style='color:#808030; '>(</span>barButtonAddText<span style='color:#800080; '>:</span><span style='color:#808030; '>)</span><span style='color:#808030; '>]</span><span style='color:#808030; '>,</span>
+                                 <span style='color:#808030; '>[</span><span style='color:#808030; '>[</span>UIBarButtonItem alloc<span style='color:#808030; '>]</span> initWithBarButtonSystemItem<span style='color:#800080; '>:</span>UIBarButtonSystemItemFlexibleSpace
+                                                                               target<span style='color:#800080; '>:</span>nil
+                                                                               action<span style='color:#800080; '>:</span>nil<span style='color:#808030; '>]</span><span style='color:#808030; '>,</span>
+                                 <span style='color:#696969; '>// some more items could be added</span>
+                               <span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+            self<span style='color:#808030; '>.</span>textField<span style='color:#808030; '>.</span>inputAccessoryView <span style='color:#808030; '>=</span> toolBar<span style='color:#800080; '>;</span>
+        </pre>
+        </code>
+
+        
+
         
     </body>
 </html>
