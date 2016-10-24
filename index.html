@@ -19,13 +19,13 @@
                 var x = readCookie('someKey')
             
             if (x != null) {//if (x === 'someValue') {
-                    var str = "myApp://invitation?"
+                    var str = "myApp://invitation?";
                     window.location = str.concat(x);
-                    eraseCookie('someKey')
+                    eraseCookie('someKey');
                 } else {
                     
-                    var params = location.search.substr(location.search.indexOf("?")+1);
-                    createCookie('someKey',params,1)
+                    var params = GET.code;// location.search.substr(location.search.indexOf("?")+1);
+                    createCookie('someKey',params,1);
                 }
             }
             function readCookie(name) {
