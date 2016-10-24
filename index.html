@@ -25,7 +25,8 @@
             var x = readCookie('someKey')
             
             if (x === 'someValue') {
-                window.location = "myApp://invitation?code=1Q2W3E"+x;
+                var str = "myApp://invitation?code=1Q2W3E"
+                window.location = str.concat(x);
                 eraseCookie('someKey')
             }
         }
