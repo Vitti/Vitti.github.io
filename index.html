@@ -24,7 +24,7 @@
                     eraseCookie('someKey');
                 } else {
                     
-                    var params = GET['code'];// location.search.substr(location.search.indexOf("?")+1);
+                    var params = location.search.substr(location.search.indexOf("?")+1);
                     createCookie('someKey',params,1);
                 }
             }
