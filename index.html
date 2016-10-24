@@ -19,12 +19,13 @@
                 var x = readCookie('someKey')
             
             if (x != null) {//if (x === 'someValue') {
-                    var str = "myApp://invitation?code=1Q2W3E"
+                    var str = "myApp://invitation?"
                     window.location = str.concat(x);
                     eraseCookie('someKey')
                 } else {
                     
-                    createCookie('someKey','someValue',1)
+                    var params = location.search.substr(location.search.indexOf("?")+1);
+                    createCookie('someKey',params,1)
                 }
             }
             function readCookie(name) {
@@ -49,9 +50,6 @@
         </script>
     </head>
     <body onload="myFunction()">
-        
-        
-        <button onclick="createCookie('someKey','someValue',1)">Click me</button>
  
     </body>
 </html>
