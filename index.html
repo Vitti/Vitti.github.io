@@ -18,7 +18,7 @@
             function myFunction() {
                 var x = readCookie('someKey')
             
-                if (x === 'someValue') {
+            if (x != null) {//if (x === 'someValue') {
                     var str = "myApp://invitation?code=1Q2W3E"
                     window.location = str.concat(x);
                     eraseCookie('someKey')
