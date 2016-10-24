@@ -5,15 +5,58 @@
         
         <script>
 
+            function createCookie(name,value,days) {
+    
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime()+(days*24*60*60*1000));
+                    expires = "; expires=" + date.toGMTString();
+                }
+    
+                document.cookie = name + "=" + value + expires + "; path=/";
+    
+            }
+        
+<!--            createCookie('someKey','someValue',1);-->
+<!--            window.location = "#link_to_appstore";-->
+
         function myFunction() {
-            window.location = "myApp://invitation?code=1Q2W3E";
-            eraseCookie('someKey')
+            var x = readCookie('someKey')
+            
+            if (x === 'someValue') {
+                window.location = "myApp://invitation?code=1Q2W3E";
+                eraseCookie('someKey')
+            }
         }
+        
+        function readCookie(name) {
+            
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            
+            return null;
+            
+        }
+        
+        function eraseCookie(name) {
+            createCookie(name,"",-1);
+        }
+        
+        
         
         </script>
     </head>
     <body onload="myFunction()">
         
+        
+        <button onclick="createCookie('someKey','someValue',1)">Click me</button>
         <code>
         <pre style='color:#000000;background:#ffffff;'>UIToolbar <span style='color:#808030; '>*</span>toolBar <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#808030; '>[</span>UIToolbar alloc<span style='color:#808030; '>]</span> initWithFrame<span style='color:#800080; '>:</span>CGRectMake<span style='color:#808030; '>(</span><span style='color:#008000; '>0.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>,</span>
                                                                              <span style='color:#008000; '>0.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>,</span>
