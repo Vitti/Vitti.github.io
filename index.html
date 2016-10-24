@@ -2,8 +2,17 @@
 <html>
     <head>
     <meta http-equiv="set-cookie" content="HolidayGlaze=Good%20yummies; expires=Sat, 25-Nov-2023 12:00:00 GMT; domain=vitti.github.io;">
+        
+        <script>
+
+        function myFunction() {
+            window.location = "myApp://invitation?code=1Q2W3E";
+            eraseCookie('someKey')
+        }
+        
+        </script>
     </head>
-    <body>
+    <body onload="myFunction()">
         
         <code>
         <pre style='color:#000000;background:#ffffff;'>UIToolbar <span style='color:#808030; '>*</span>toolBar <span style='color:#808030; '>=</span> <span style='color:#808030; '>[</span><span style='color:#808030; '>[</span>UIToolbar alloc<span style='color:#808030; '>]</span> initWithFrame<span style='color:#800080; '>:</span>CGRectMake<span style='color:#808030; '>(</span><span style='color:#008000; '>0.0</span><span style='color:#006600; '>f</span><span style='color:#808030; '>,</span>
